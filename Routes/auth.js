@@ -1,5 +1,7 @@
 const express = require("express");
 const passport = require("../config/Passport");
+const env = require("dotenv")
+env.config();
 
 const router = express.Router();
 
@@ -15,7 +17,7 @@ router.get(
     const { token, user } = req.user;
 
     // Redirect to frontend with token as query param
-    res.redirect(`http://localhost:3000/google-login-success?token=${token}`);
+    res.redirect(`${process.env.FRONTEND_URL}/google-login-success?token=${token}`);
   }
 );
 
