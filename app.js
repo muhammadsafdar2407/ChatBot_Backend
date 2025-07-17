@@ -11,7 +11,7 @@ const passport = require("./config/Passport");
 env.config()
 
 const app=express()
-port=5000
+port=process.env.port || 5000
 
 app.use(
   cors({
