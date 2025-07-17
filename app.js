@@ -15,7 +15,7 @@ port=process.env.port || 5000
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://chat-bot-frontend-gamma.vercel.app/",
     credentials: true,
   })
 );
